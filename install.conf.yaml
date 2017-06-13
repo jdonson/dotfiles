@@ -1,0 +1,25 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
+    ~/.tmux.conf: tmux.conf
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.zsh: zsh/
+    ~/.zshrc: zshrc
+    ~/.tmux: tmux/
+    ~/.ssh:
+       force: true
+       path: ssh
+    ~/.bin:
+       force: true
+       path: bin
+    ~/.iterm: iterm/
+
+- shell:
+  - [git update-submodules, updating submodules]
+  - [mkdir -p ~/.bin, Creating bin dir]
+  - [mkdir -p ~/.keychain, creating ssh-agent forward dir]
+  - [vim +PluginInstall +qall, run to instal vim plugins]

@@ -1,0 +1,64 @@
+Host *
+   UseKeychain yes
+   AddKeysToAgent yes
+   IdentityFile ~/.ssh/id_rsa_amerenda_placeiq
+   IdentityFile ~/.ssh/id_rsa_amerenda_personal
+
+Host *.placeiq.net
+  user amerenda
+  ForwardAgent yes
+  identityfile ~/.ssh/id_rsa_amerenda_placeiq
+
+### Git servers
+Host github.com
+  IdentityFile ~/.ssh/github_deploy
+
+Host gitlab-122.sec.placeiq.net
+  IdentityFile ~/.ssh/github_deploy
+
+Host bitbucket.org
+  IdentityFile ~/.ssh/github_deploy
+
+#### Work Servers
+Host *.placeiq.net
+  user amerenda
+  ForwardAgent yes
+  identityfile ~/.ssh/id_rsa_amerenda_placeiq
+
+host nginx-*.nym1.placeiq.net
+  user amerenda
+  proxycommand ssh amerenda@amerenda-167.nym1.placeiq.net nc %h %p
+  ForwardAgent yes
+  identityfile ~/.ssh/id_rsa_amerenda_placeiq
+
+host nginx-*.sec.placeiq.net
+  user amerenda
+  ForwardAgent yes
+  proxycommand ssh amerenda@amerenda-167.nym1.placeiq.net nc %h %p
+  identityfile ~/.ssh/id_rsa_amerenda_placeiq
+
+host opsui-35.nym1.placeiq.net
+  hostname opsui-35.nym1.placeiq.net
+  user amerenda
+  proxycommand ssh amerenda@amerenda-167.sec.placeiq.net nc %h %p
+  ForwardAgent yes
+  identityfile ~/.ssh/id_rsa_amerenda_placeiq
+
+host opsui-35.sec.placeiq.net
+  hostname opsui-35.sec.placeiq.net
+  user amerenda
+  proxycommand ssh amerenda@amerenda-167.sec.placeiq.net nc %h %p
+  ForwardAgent yes
+  identityfile ~/.ssh/id_rsa_amerenda_placeiq
+
+host 10.32.1.247
+  hostname 10.32.1.247
+  user centos
+  identityfile ~/.ssh/piq-aws-infrastructure.pem
+
+### Personal servers
+host tasks.stormhold.net
+  hostname tasks.stormhold.net
+  user alex
+  identityfile ~/.ssh/id_rsa_amerenda_personal
+  ForwardAgent yes

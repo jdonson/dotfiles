@@ -1,0 +1,43 @@
+[user]
+	email = amerenda89@gmail.com
+	name = Alex Merenda
+	signingkey = 210A5303
+
+[alias]
+    st = status -sb
+    di = diff
+    aa = add -A
+    a  = add
+    l = log --pretty=oneline --abbrev-commit
+    s = status
+    pullff = pull --ff-only
+    update-submodules = submodule update --init --recursive
+    upgrade-submodules = submodule update --init --remote
+    pish = push
+	commend = commit --amend --no-edit
+	grog = log --graph --abbrev-commit --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)\"
+
+[color]
+	ui = auto
+
+[color "grep"]
+	match = cyan bold
+	selected = blue
+	context = normal
+	filename = magenta
+	linenumber = green
+	separator = yellow
+	function = blue
+
+# Source for local modifications
+[include]
+	path = ~/.gitconfig_local
+[push]
+	default = simple
+[gpg]
+	program = gpg2
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
