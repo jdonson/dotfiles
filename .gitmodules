@@ -12,5 +12,5 @@
     path = zsh/plugins/zsh-syntax-highlighting
     url = git@github.com:zsh-users/zsh-syntax-highlighting.git
 [submodule "vim/bundle/Vundle.vim"]
-    path = vim/bundle/Vundle.vim
-    url = https://github.com/VundleVim/Vundle.vim.git
+	path = vim/bundle/Vundle.vim
+	url = https://github.com/VundleVim/Vundle.vim.git
