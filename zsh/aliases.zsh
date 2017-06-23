@@ -27,7 +27,6 @@ alias tl="clear && task list"
 alias tlw="clear && task list +placeiq"
 alias tlp="clear && task list +personal"
 
-alias brewup="brew update && brew upgrade $(brew outdated)"
 alias subup="git submodule foreach git pull origin master"
 
 # Get current number of commits on current branch, or another branch, as compared to master.
