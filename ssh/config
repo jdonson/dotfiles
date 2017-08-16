@@ -62,3 +62,8 @@ host tasks.stormhold.net
   user alex
   identityfile ~/.ssh/id_rsa_amerenda_personal
   ForwardAgent yes
+
+host alex-ubuntu
+  user alex
+  identityfile ~/.ssh/id_rsa_amerenda_personal
+  ForwardAgent yes
