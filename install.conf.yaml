@@ -9,6 +9,9 @@
     ~/.vimrc: vimrc
     ~/.zsh: zsh/
     ~/.zshrc: zshrc
+    ~/.zprofile: zprofile
+    ~/.xbindkeysrc: xbindkeysrc
+    ~/.Xresources: Xresources
     ~/.tmux: tmux/
     ~/.ssh:
        force: true
@@ -16,7 +19,6 @@
     ~/.bin:
        force: true
        path: bin
-    ~/.iterm: iterm/
 
 - shell:
   - [git update-submodules, updating submodules]
