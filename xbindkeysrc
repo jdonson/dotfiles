@@ -45,7 +45,18 @@
 "xbacklight -inc 3"
    XF86MonBrightnessUp
 
+# increase volume
+'sh -c "pactl set-sink-mute 0 false ; pactl set-sink-volume 0 +5%"'
+   XF86AudioRaiseVolume
 
+
+# decrease volume
+'sh -c "pactl set-sink-mute 0 false ; pactl set-sink-volume 0 -5%"'
+   XF86AudioLowerVolume
+
+# mute volume
+"pactl set-sink-mute 0 toggle"
+   XF86AudioMute
 
 # Examples of commands:
 
