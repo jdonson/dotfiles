@@ -46,17 +46,29 @@
    XF86MonBrightnessUp
 
 # increase volume
-'sh -c "pactl set-sink-mute 0 false ; pactl set-sink-volume 0 +5%"'
+'sh -c "pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ +5%"'
    XF86AudioRaiseVolume
 
-
 # decrease volume
-'sh -c "pactl set-sink-mute 0 false ; pactl set-sink-volume 0 -5%"'
+'sh -c "pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ -5%"'
    XF86AudioLowerVolume
 
 # mute volume
-"pactl set-sink-mute 0 toggle"
+"pactl set-sink-mute @DEFAULT_SINK@ toggle"
    XF86AudioMute
+
+# Play/Pause
+"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+   XF86AudioPlay
+
+# Next
+"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+   XF86AudioNext
+
+# Previous
+"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+   XF86AudioPrev
+
 
 # Examples of commands:
 
