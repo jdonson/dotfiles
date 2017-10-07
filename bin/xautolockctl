@@ -1,0 +1,13 @@
+#!/bin/bash
+while true
+do
+    activ_win_id=$(xprop -root _NET_ACTIVE_WINDOW)
+    if xprop -id ${activ_win_id:40:9} | grep _NET_WM_STATE_FULLSCREEN && xprop -id ${activ_win_id:40:9} | grep urxvt; then
+        xset -dpms
+        xautolock -disable
+    else
+        xautolock -enable
+        xset +dpms
+    fi
+    sleep 120
+done
