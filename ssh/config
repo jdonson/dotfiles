@@ -39,7 +39,7 @@ host nginx-*.sec.placeiq.net
 host opsui-35.nym1.placeiq.net
   hostname opsui-35.nym1.placeiq.net
   user amerenda
-  proxycommand ssh amerenda@amerenda-167.sec.placeiq.net nc %h %p
+  proxycommand ssh amerenda@amerenda-167.nym1.placeiq.net nc %h %p
   ForwardAgent yes
   identityfile ~/.ssh/id_rsa_amerenda_placeiq
 
