@@ -1,24 +1,24 @@
 - clean: ['~']
 
 - link:
-    ~/.dotfiles: ''
-    ~/.gitconfig: gitconfig
-    ~/.gitignore_global: gitignore_global
-    ~/.tmux.conf: tmux.conf
-    ~/.vim: vim/
-    ~/.vimrc: vimrc
-    ~/.zsh: zsh/
-    ~/.zshrc: zshrc
-    ~/.zprofile: zprofile
-    ~/.xbindkeysrc: xbindkeysrc
-    ~/.Xresources: Xresources
-    ~/.tmux: tmux/
-    ~/.ssh:
-       force: true
-       path: ssh
     ~/.bin:
        force: true
        path: bin
+    ~/.dotfiles: ''
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
+    ~/.ssh:
+       force: true
+       path: ssh
+    ~/.tmux: tmux/
+    ~/.tmux.conf: tmux.conf
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.xbindkeysrc: xbindkeysrc
+    ~/.Xresources: Xresources
+    ~/.zprofile: zprofile
+    ~/.zsh: zsh/
+    ~/.zshrc: zshrc
 
 - shell:
   - [git update-submodules, updating submodules]
