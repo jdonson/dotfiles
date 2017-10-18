@@ -7,6 +7,7 @@
     ~/.dotfiles: ''
     ~/.gitconfig: gitconfig
     ~/.gitignore_global: gitignore_global
+    ~/.snakebiterc: snakebiterc
     ~/.ssh:
        force: true
        path: ssh
