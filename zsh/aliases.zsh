@@ -29,6 +29,12 @@ alias tlp="clear && task list +personal"
 
 alias subup="git submodule foreach git pull origin master"
 
+# Work aliases
+alias gfs='snakebite -n gandalf-nn.placeiq.net'
+alias pfs='snakebite -n phoenix-nn.placeiq.net'
+
+
+
 # Get current number of commits on current branch, or another branch, as compared to master.
 function gcommits()
 {
