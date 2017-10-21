@@ -16,6 +16,7 @@
     ~/.vim: vim/
     ~/.vimrc: vimrc
     ~/.xbindkeysrc: xbindkeysrc
+    ~/.xinitrc: xinitrc
     ~/.Xresources: Xresources
     ~/.zprofile: zprofile
     ~/.zsh: zsh/
