@@ -5,6 +5,7 @@
        force: true
        path: bin
     ~/.dotfiles: ''
+    ~/.fonts.conf: fonts.conf
     ~/.gitconfig: gitconfig
     ~/.gitignore_global: gitignore_global
     ~/.snakebiterc: snakebiterc
