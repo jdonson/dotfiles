@@ -20,12 +20,13 @@ alias n='terminal_velocity ~/notes'
 alias np='terminal_velocity ~/Dropbox/Work/PlaceIQ/Notes'
 alias na='terminal_velocity ~/Dropbox/Documentation/Notes'
 alias mkdir="mkdir -pv"
-alias ssh="ssh -A"
+#alias ssh="ssh -A"
 alias myip="curl http://ipecho.net/plain; echo"
 alias clip="xclip -selection c"
 alias tl="clear && task list"
 alias tlw="clear && task list +placeiq"
 alias tlp="clear && task list +personal"
+alias tkill="tmux kill-session"
 
 alias subup="git submodule foreach git pull origin master"
 
