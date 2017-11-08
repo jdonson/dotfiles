@@ -39,6 +39,9 @@ fi
 # sets custom font path
 xset +fp /usr/share/fonts/local/
 
+# sets wallpaper
+feh --bg-scale ~/Dropbox/Photos/Wallpaper/Macbook\ Retina/Argentina_MBPro_Retina.jpg
+
 # launches redshift
 pgrep redshift &> /dev/null || redshift &> /dev/null &
 
