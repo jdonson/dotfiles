@@ -26,27 +26,39 @@ Host *.placeiq.net
 
 host nginx-*.nym1.placeiq.net
   user amerenda
-  proxycommand ssh amerenda@amerenda-167.nym1.placeiq.net nc %h %p
+  proxycommand ssh -A amerenda@amerenda-167.nym1.placeiq.net nc %h %p
   ForwardAgent yes
   identityfile ~/.ssh/id_rsa_amerenda_placeiq
 
 host nginx-*.sec.placeiq.net
   user amerenda
   ForwardAgent yes
-  proxycommand ssh amerenda@amerenda-167.nym1.placeiq.net nc %h %p
+  proxycommand ssh -A amerenda@amerenda-167.nym1.placeiq.net nc %h %p
+  identityfile ~/.ssh/id_rsa_amerenda_placeiq
+
+host apache-secure-*.nym1.placeiq.net
+  user amerenda
+  proxycommand ssh -A amerenda@amerenda-167.nym1.placeiq.net nc %h %p
+  ForwardAgent yes
+  identityfile ~/.ssh/id_rsa_amerenda_placeiq
+
+host apache-secure-*.sec.placeiq.net
+  user amerenda
+  ForwardAgent yes
+  proxycommand ssh -A amerenda@amerenda-167.nym1.placeiq.net nc %h %p
   identityfile ~/.ssh/id_rsa_amerenda_placeiq
 
 host opsui-35.nym1.placeiq.net
   hostname opsui-35.nym1.placeiq.net
   user amerenda
-  proxycommand ssh amerenda@amerenda-167.nym1.placeiq.net nc %h %p
+  proxycommand ssh -A amerenda@amerenda-167.nym1.placeiq.net nc %h %p
   ForwardAgent yes
   identityfile ~/.ssh/id_rsa_amerenda_placeiq
 
 host opsui-35.sec.placeiq.net
   hostname opsui-35.sec.placeiq.net
   user amerenda
-  proxycommand ssh amerenda@amerenda-167.sec.placeiq.net nc %h %p
+  proxycommand ssh -A amerenda@amerenda-167.sec.placeiq.net nc %h %p
   ForwardAgent yes
   identityfile ~/.ssh/id_rsa_amerenda_placeiq
 
