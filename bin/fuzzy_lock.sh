@@ -10,6 +10,10 @@ mogrify -scale 20% -scale 500% /tmp/screen_locked.png
 if pgrep spotify >/dev/null; then
     dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Pause
 fi
+
+# lock keepass databse
+keepass -lock-all
+
 # Lock screen displaying this image.
 i3lock -i /tmp/screen_locked.png
 
