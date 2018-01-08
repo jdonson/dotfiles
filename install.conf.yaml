@@ -3,7 +3,8 @@
 - link:
     ~/.bin:
        force: true
-       path: bin
+       path: bin/
+    ~/.config/i3: i3/
     ~/.dotfiles: ''
     ~/.fonts.conf: fonts.conf
     ~/.gitconfig: gitconfig
