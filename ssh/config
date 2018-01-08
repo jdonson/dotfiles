@@ -78,3 +78,27 @@ host alex-ubuntu
   user alex
   identityfile ~/.ssh/id_rsa_amerenda_personal
   ForwardAgent yes
+
+host rpi3-1
+  user alex
+  hostname 192.168.86.201
+  identityfile ~/.ssh/id_rsa_amerenda_personal
+  ForwardAgent yes
+
+host rpi3-2
+  user alex
+  hostname 192.168.86.202
+  identityfile ~/.ssh/id_rsa_amerenda_personal
+  ForwardAgent yes
+
+host rpi3-3
+  user alex
+  hostname 192.168.86.203
+  identityfile ~/.ssh/id_rsa_amerenda_personal
+  ForwardAgent yes
+
+host rpi3-4
+  user alex
+  hostname 192.168.86.204
+  identityfile ~/.ssh/id_rsa_amerenda_personal
+  ForwardAgent yes
