@@ -18,7 +18,7 @@
     sort = yes
     idle_threshold = 120
 
-    font = xft:Ubuntu Mono 11
+    font = xft:Ubuntu Mono 9
 
     line_height = 0
     markup = full
