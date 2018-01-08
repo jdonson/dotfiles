@@ -11,11 +11,11 @@ if pgrep spotify >/dev/null; then
     dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Pause
 fi
 
-# lock keepass databse
-keepass -lock-all
+# Stops notifications
+pkill -u "$USER" -USR1 dunst
 
 # Lock screen displaying this image.
-i3lock -i /tmp/screen_locked.png
+i3lock -n -i /tmp/screen_locked.png
 
-# Turn the screen off after a delay.
-sleep 60; pgrep i3lock && xset dpms force off
+# resumes notificaions
+pkill -u "$USER" -USR2 dunst
