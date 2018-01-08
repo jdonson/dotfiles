@@ -4,7 +4,10 @@
     ~/.bin:
        force: true
        path: bin/
+    ~/.config/compton.conf: compton.conf
+    ~/.config/dunst: dunst/
     ~/.config/i3: i3/
+    ~/.config/redshift.conf: redshift.conf
     ~/.dotfiles: ''
     ~/.fonts.conf: fonts.conf
     ~/.gitconfig: gitconfig
