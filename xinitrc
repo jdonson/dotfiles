@@ -44,7 +44,8 @@ compton &
 xset +fp /usr/share/fonts/local/
 
 # sets wallpaper
-feh --bg-scale ~/Dropbox/Photos/Wallpaper/Macbook\ Retina/Argentina_MBPro_Retina.jpg
+#feh --bg-scale ~/Dropbox/Photos/Wallpaper/Macbook\ Retina/Argentina_MBPro_Retina.jpg
+feh --bg-scale ~/Dropbox/Photos/Wallpaper/Macbook\ Retina/N6dS3.jpg
 
 # launches redshift
 pgrep redshift &> /dev/null || redshift &> /dev/null &
@@ -54,10 +55,3 @@ xbindkeys
 
 # starts i3 window manager and logs it
 exec i3 -V >> ~/.i3/log/i3-out-$(date + '%F-%k-%M-%S').log 2>&1
-#exec --no-startup-id i3
-
-#twm &
-#xclock -geometry 50x50-1+1 &
-#xterm -geometry 80x50+494+51 &
-#xterm -geometry 80x20+494-0 &
-#exec xterm -geometry 80x66+0+0 -name login
