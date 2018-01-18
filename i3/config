@@ -10,6 +10,9 @@ font xft:Ubuntu Mono 11
 bindsym $mod+Delete exec --no-startup-id "~/.bin/fuzzy_lock.sh"
 exec --no-startup-id xautolock -time 10 -locker "~/.bin/fuzzy_lock.sh"
 
+# dunst notifications
+exec --no-startup-id dunst
+
 # screenshot
 bindsym Print exec scrot -e 'mv $f ~/Dropbox/Screenshots'
 bindsym --release $mod+Print exec --no-startup-id scrot -s -e 'mv $f ~/Dropbox/Screenshots'
