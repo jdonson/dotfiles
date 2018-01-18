@@ -13,4 +13,3 @@ fi
 
 # Lock screen displaying this image.
 i3lock -i /tmp/screen_locked.png
-
