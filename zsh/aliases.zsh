@@ -18,6 +18,7 @@ alias mv='mv -i'
 # Misc aliases
 alias n='terminal_velocity ~/notes'
 alias np='terminal_velocity ~/Dropbox/Work/PlaceIQ/Notes'
+alias nd='terminal_velocity ~/Dropbox/Work/PlaceIQ/daySummary'
 alias na='terminal_velocity ~/Dropbox/Documentation/Notes'
 alias mkdir="mkdir -pv"
 alias ssh="ssh -A"
