@@ -9,4 +9,4 @@ if [ $# -eq 0 ]
     echo "please specify a backup path"
 fi
 
-rsync -aAXv --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/home/amerenda/.local/share/Steam/*"} / "$1"
+rsync -aAXv --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/home/amerenda/.local/share/Steam/*","/home/amerenda/Dropbox/*","$1"/*} / "$1"
