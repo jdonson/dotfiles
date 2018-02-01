@@ -1,5 +1,5 @@
 # Use colors in coreutils utilities output
-alias ls='ls -G'
+alias ls='ls -G --color=auto'
 alias grep='grep --color'
 
 # ls aliases
@@ -7,6 +7,8 @@ alias ll='ls -lah'
 alias la='ls -A'
 alias l='ls'
 alias l.='ls -d .*'
+alias lr='ls -lahtr'
+alias lt='ls -halt'
 
 # Aliases to protect against overwriting
 alias cp='cp -i'
@@ -18,16 +20,27 @@ alias mv='mv -i'
 # Misc aliases
 alias n='terminal_velocity ~/notes'
 alias np='terminal_velocity ~/Dropbox/Work/PlaceIQ/Notes'
+alias nd='terminal_velocity ~/Dropbox/Work/PlaceIQ/daySummary'
 alias na='terminal_velocity ~/Dropbox/Documentation/Notes'
 alias mkdir="mkdir -pv"
 alias ssh="ssh -A"
 alias myip="curl http://ipecho.net/plain; echo"
-alias clip="pbcopy"
+alias clip="xclip -selection c"
 alias tl="clear && task list"
 alias tlw="clear && task list +placeiq"
 alias tlp="clear && task list +personal"
+alias tkill="tmux kill-session"
+
+alias ip2='ipython2'
+alias ip3='ipython'
 
 alias subup="git submodule foreach git pull origin master"
+
+# Work aliases
+alias gfs='snakebite -n gandalf-nn.placeiq.net'
+alias pfs='snakebite -n phoenix-nn.placeiq.net'
+
+
 
 # Get current number of commits on current branch, or another branch, as compared to master.
 function gcommits()

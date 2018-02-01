@@ -1,5 +1,4 @@
 Host *
-   UseKeychain yes
    AddKeysToAgent yes
    IdentityFile ~/.ssh/id_rsa_amerenda_placeiq
    IdentityFile ~/.ssh/id_rsa_amerenda_personal
@@ -27,28 +26,40 @@ Host *.placeiq.net
 
 host nginx-*.nym1.placeiq.net
   user amerenda
-  proxycommand ssh amerenda@amerenda-167.nym1.placeiq.net nc %h %p
+  proxycommand ssh -A amerenda@amerenda-167.nym1.placeiq.net nc %h %p
   ForwardAgent yes
   identityfile ~/.ssh/id_rsa_amerenda_placeiq
 
 host nginx-*.sec.placeiq.net
   user amerenda
   ForwardAgent yes
-  proxycommand ssh amerenda@amerenda-167.nym1.placeiq.net nc %h %p
+  proxycommand ssh -A amerenda@amerenda-167.nym1.placeiq.net nc %h %p
+  identityfile ~/.ssh/id_rsa_amerenda_placeiq
+
+host apache-secure-*.nym1.placeiq.net
+  user amerenda
+  proxycommand ssh -A amerenda@amerenda-167.nym1.placeiq.net nc %h %p
+  ForwardAgent yes
+  identityfile ~/.ssh/id_rsa_amerenda_placeiq
+
+host apache-secure-*.sec.placeiq.net
+  user amerenda
+  ForwardAgent yes
+  proxycommand ssh -A amerenda@amerenda-167.sec.placeiq.net nc %h %p
   identityfile ~/.ssh/id_rsa_amerenda_placeiq
 
 host opsui-35.nym1.placeiq.net
   hostname opsui-35.nym1.placeiq.net
   user amerenda
-  proxycommand ssh amerenda@amerenda-167.sec.placeiq.net nc %h %p
+  proxycommand ssh -A amerenda@amerenda-167.nym1.placeiq.net nc %h %p
   ForwardAgent yes
   identityfile ~/.ssh/id_rsa_amerenda_placeiq
 
 host opsui-35.sec.placeiq.net
   hostname opsui-35.sec.placeiq.net
   user amerenda
-  proxycommand ssh amerenda@amerenda-167.sec.placeiq.net nc %h %p
-  ForwardAgent yes
+  proxycommand ssh -a amerenda@amerenda-167.sec.placeiq.net nc %h %p
+  forwardagent yes
   identityfile ~/.ssh/id_rsa_amerenda_placeiq
 
 host 10.32.1.247
@@ -65,5 +76,29 @@ host tasks.stormhold.net
 
 host alex-ubuntu
   user alex
+  identityfile ~/.ssh/id_rsa_amerenda_personal
+  ForwardAgent yes
+
+host rpi3-1
+  user alex
+  hostname 192.168.86.201
+  identityfile ~/.ssh/id_rsa_amerenda_personal
+  ForwardAgent yes
+
+host rpi3-2
+  user alex
+  hostname 192.168.86.202
+  identityfile ~/.ssh/id_rsa_amerenda_personal
+  ForwardAgent yes
+
+host rpi3-3
+  user alex
+  hostname 192.168.86.203
+  identityfile ~/.ssh/id_rsa_amerenda_personal
+  ForwardAgent yes
+
+host rpi3-4
+  user alex
+  hostname 192.168.86.204
   identityfile ~/.ssh/id_rsa_amerenda_personal
   ForwardAgent yes

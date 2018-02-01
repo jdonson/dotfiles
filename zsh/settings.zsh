@@ -1,7 +1,6 @@
 # Initialize completion
 autoload -Uz compinit && compinit
 
-
 # Initialize editing command line
 autoload -U edit-command-line && zle -N edit-command-line
 

@@ -1,25 +1,36 @@
 - clean: ['~']
 
 - link:
+    ~/.bin:
+       force: true
+       path: bin/
+    ~/.config/compton.conf: compton.conf
+    ~/.config/dunst: dunst/
+    ~/.config/i3: i3/
+    ~/.config/ranger: ranger/
+    ~/.config/redshift.conf: redshift.conf
     ~/.dotfiles: ''
+    ~/.fonts.conf: fonts.conf
     ~/.gitconfig: gitconfig
     ~/.gitignore_global: gitignore_global
-    ~/.tmux.conf: tmux.conf
-    ~/.vim: vim/
-    ~/.vimrc: vimrc
-    ~/.zsh: zsh/
-    ~/.zshrc: zshrc
-    ~/.tmux: tmux/
+    ~/.snakebiterc: snakebiterc
     ~/.ssh:
        force: true
        path: ssh
-    ~/.bin:
-       force: true
-       path: bin
-    ~/.iterm: iterm/
+    ~/.tmux: tmux/
+    ~/.tmux.conf: tmux.conf
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.xbindkeysrc: xbindkeysrc
+    ~/.xinitrc: xinitrc
+    ~/.Xresources: Xresources
+    ~/.zprofile: zprofile
+    ~/.zsh: zsh/
+    ~/.zshrc: zshrc
 
 - shell:
   - [git update-submodules, updating submodules]
   - [mkdir -p ~/.bin, Creating bin dir]
   - [mkdir -p ~/.keychain, creating ssh-agent forward dir]
+  - [mkdir -p ~/.config/i3, creating i3 config dir]
   - [vim +PluginInstall +qall, run to instal vim plugins]

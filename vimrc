@@ -26,6 +26,7 @@ Plugin 'ltlollo/diokai'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'hdima/python-syntax'
+Plugin 'tmux-plugins/vim-tmux'
 
 " File management
 Plugin 'tpope/vim-fugitive'
@@ -69,7 +70,8 @@ set laststatus=2
 "let g:airline_theme='understated'
 let g:airline_theme='bubblegum'
 "let g:airline_theme='ubaryd'
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
+let g:airline_symbols_ascii = 1
 let g:Powerline_symbols = 'fancy'
 set encoding=utf-8
 set t_Co=256
