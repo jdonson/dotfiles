@@ -8,6 +8,7 @@ alias la='ls -A'
 alias l='ls'
 alias l.='ls -d .*'
 alias lr='ls -lahtr'
+alias lt='ls -halt'
 
 # Aliases to protect against overwriting
 alias cp='cp -i'
