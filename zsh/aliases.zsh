@@ -1,14 +1,20 @@
 # Use colors in coreutils utilities output
-alias ls='ls -G --color=auto'
+alias ls='exa'
 alias grep='grep --color'
 
 # ls aliases
-alias ll='ls -lah'
-alias la='ls -A'
-alias l='ls'
+#alias ll='ls -lah'
+#alias la='ls -A'
+#alias l='ls'
+#alias l.='ls -d .*'
+#alias lr='ls -lahtr'
+#alias lt='ls -halt'
+alias ll='exa -laa'
+alias la='exa -a'
+alias l='exa'
 alias l.='ls -d .*'
-alias lr='ls -lahtr'
-alias lt='ls -halt'
+alias lr='exa -laar'
+alias lt='exa -laas=date'
 
 # Aliases to protect against overwriting
 alias cp='cp -i'
