@@ -47,7 +47,11 @@ false
 *color7: #eee8d5
 *color15: #fdf6e3
 
-
+! rofi
+rofi.font: Noto Sans 10
+rofi.terminal: urxvt
+rofi.ssh-client: ssh
+rofi.ssh-command: {terminal} -e "{ssh-client} {host}"
 
 ! Urxvt settings
 URxvt.transparent: false
