@@ -1,5 +1,5 @@
 # Use colors in coreutils utilities output
-alias ls='exa'
+alias ls='ls --color'
 alias grep='grep --color'
 
 # ls aliases
@@ -36,10 +36,13 @@ alias tl="clear && task list"
 alias tlw="clear && task list +placeiq"
 alias tlp="clear && task list +personal"
 alias tkill="tmux kill-session"
+alias fsize="du -sh ./* | sort -h"
 
+# Python aliases
 alias ip2='ipython2'
 alias ip3='ipython'
 
+# Git aliases
 alias subup="git submodule foreach git pull origin master"
 
 # Work aliases
