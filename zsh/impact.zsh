@@ -1,0 +1,20 @@
+autoload bashcompinit
+bashcompinit
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/alexmerenda/bin/platform/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/alexmerenda/bin/platform/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+#if [ -f '/Users/alexmerenda/bin/platform/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/alexmerenda/bin/platform/google-cloud-sdk/completion.bash.inc'; fi
+
+ssh -O check bastion
+
+retVal=$?
+
+if [ $retVal -ne 0 ]; then
+   echo "Created socks tunnel to bastion..."
+   # forward 1080 via socks
+   ssh -fNTMn -D 1080 bastion
+else
+   echo "Socks tunnel to bastion is already open..."
+fi
