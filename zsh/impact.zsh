@@ -5,7 +5,7 @@ bashcompinit
 if [ -f '/Users/alexmerenda/bin/platform/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/alexmerenda/bin/platform/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-#if [ -f '/Users/alexmerenda/bin/platform/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/alexmerenda/bin/platform/google-cloud-sdk/completion.bash.inc'; fi
+if [ -f '/Users/alexmerenda/bin/platform/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/alexmerenda/bin/platform/google-cloud-sdk/completion.zsh.inc'; fi
 
 ssh -O check bastion
 
