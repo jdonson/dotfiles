@@ -3,6 +3,9 @@ if [ -f ~/.zshrc_local_before ]; then
     source ~/.zshrc_local_before
 fi
 
+# Impact settings
+source ~/.zsh/impact.zsh
+
 # External plugins (initialized before)
 source ~/.zsh/plugins_before.zsh
 
