@@ -1,7 +1,10 @@
 Host *
-   AddKeysToAgent yes
-   IdentityFile ~/.ssh/id_rsa_amerenda_placeiq
-   IdentityFile ~/.ssh/id_rsa_amerenda_personal
+  Host *
+  UseKeychain yes
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_rsa_amerenda_personal
+  IdentityFile ~/.ssh/google_compute_engine
+  IdentityFile ~/.ssh/id_rsa_impact
 
 ### Git servers
 Host github.com
@@ -42,6 +45,12 @@ host alex-ubuntu
   identityfile ~/.ssh/id_rsa_amerenda_personal
   ForwardAgent yes
 
+host rpi3-0
+  user alex
+  hostname 192.168.86.200
+  identityfile ~/.ssh/id_rsa_amerenda_personal
+  ForwardAgent yes
+
 host rpi3-1
   user alex
   hostname 192.168.86.201
@@ -57,12 +66,6 @@ host rpi3-2
 host rpi3-3
   user alex
   hostname 192.168.86.203
-  identityfile ~/.ssh/id_rsa_amerenda_personal
-  ForwardAgent yes
-
-host rpi3-4
-  user alex
-  hostname 192.168.86.204
   identityfile ~/.ssh/id_rsa_amerenda_personal
   ForwardAgent yes
 
