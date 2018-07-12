@@ -68,7 +68,7 @@ function focus()
     elif ! [[ "${1}" =~ ^[0-9]+$ ]]; then
         echo "Error: argument must be a number"
     else
-        (zsh -c "~/.bin/focus.sh start ${1}; sleep $(( ${1} * 1 )); ~/.bin/focus.sh stop ${1}" &)
+        (zsh -c "~/.bin/focus.sh start ${1}; sleep $(( ${1} * 60 )); ~/.bin/focus.sh stop ${1}" &)
     fi
 }
 
