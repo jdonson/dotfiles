@@ -1,2 +1,3 @@
 # External plugins (initialized after)
-source ~/.zsh/plugins/zsh-dircolors-solarized/zsh-dircolors-solarized.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
