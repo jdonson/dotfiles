@@ -21,13 +21,13 @@ function blackHoleSites()
     sudo /bin/cp -f /tmp/hosts.tmp /etc/hosts
 }
 
-declare -a sitesToBlock=("reddit.com" "facebook.com" "news.ycombinator.com")
 
 if [[ ${1} == "start" ]]; then
     osascript -e "display notification \"Time to focus! for ${2} minutes\" with title \"Focus\""
+    declare -a sitesToBlock=("reddit.com" "facebook.com" "news.ycombinator.com")
     blackHoleSites
 elif [[ ${1} == "stop" ]]; then
     say "Time is up" &
-    osascript -e "display notification \"Time is up! You focused for ${2} minutes\" with title \"Focus\""
+    osascript -e "display notification \"Time is up! You focused for ${2} minutes\" with title \"Focus\"" &
     sudo /bin/cp -f /etc/hosts-orginal /etc/hosts
 fi
