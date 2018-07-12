@@ -25,6 +25,12 @@ Host bastion
   IdentityFile ~/.ssh/google_compute_engine
   ControlPath ~/.ssh/bastion.ctl
 
+# Monitoring
+Host prom
+  Hostname prometheus-us-central1-a.int.2pth.com
+  ProxyCommand ssh bastion -W %h:%p
+  StrictHostKeyChecking no
+
 ## Staging
 Host bastion-stg
   Hostname 35.199.63.95
