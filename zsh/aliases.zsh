@@ -20,6 +20,10 @@ alias lt='exa -laas=date'
 alias cp='cp -i'
 alias mv='mv -i'
 
+# Homebrew aliases
+alias brewup="brew update && brew upgrade"
+# brew commands
+# https://docs.brew.sh/FAQ
 
 # Misc aliases
 alias n='terminal_velocity ~/notes'
