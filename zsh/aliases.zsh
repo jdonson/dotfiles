@@ -61,6 +61,16 @@ alias pfs='snakebite -n phoenix-nn.placeiq.net'
 # Docker aliases (Is this the best way to do this??)
 alias influxd='docker exec -it influxd influxd'
 
+function focus()
+{
+    if [[ "${1}" == "" ]]; then
+        echo "Please specify the number of minutes to focus"
+    elif ! [[ "${1}" =~ ^[0-9]+$ ]]; then
+        echo "Error: argument must be a number"
+    else
+        (zsh -c "~/.bin/focus.sh start ${1}; sleep $(( ${1} * 1 )); ~/.bin/focus.sh stop ${1}" &)
+    fi
+}
 
 # Get current number of commits on current branch, or another branch, as compared to master.
 function gcommits()
