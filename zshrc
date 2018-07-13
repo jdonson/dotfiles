@@ -6,6 +6,9 @@ fi
 # Impact settings
 source ~/.zsh/impact.zsh
 
+# go settings
+source ~/.zsh/go.zsh
+
 # External plugins (initialized before)
 source ~/.zsh/plugins_before.zsh
 
