@@ -16,6 +16,7 @@
     ~/.gitconfig: gitconfig
     ~/.gitignore_global: gitignore_global
     ~/.pip: pip
+    ~/.pydistutils.cfg: pydistutils.cfg
     ~/.scripts: scripts
     ~/.snakebiterc: snakebiterc
     ~/.ssh:
