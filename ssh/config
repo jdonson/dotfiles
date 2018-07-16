@@ -21,7 +21,6 @@ Host azkaban-prod
 
 Host bastion
   Hostname 35.199.17.108
-  ForwardAgent yes
   IdentityFile ~/.ssh/google_compute_engine
   ControlPath ~/.ssh/bastion.ctl
 
@@ -34,7 +33,6 @@ Host prom
 ## Staging
 Host bastion-stg
   Hostname 35.199.63.95
-  ForwardAgent yes
   StrictHostKeyChecking no
   IdentityFile ~/.ssh/google_compute_engine
 
