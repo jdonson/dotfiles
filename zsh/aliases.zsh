@@ -26,26 +26,16 @@ alias brewup="brew update && brew upgrade"
 # https://docs.brew.sh/FAQ
 
 # Misc aliases
-alias n='terminal_velocity ~/notes'
-alias np='terminal_velocity ~/Dropbox/Work/PlaceIQ/Notes'
-alias nd='terminal_velocity ~/Dropbox/Work/PlaceIQ/daySummary'
-alias na='terminal_velocity ~/Dropbox/Documentation/Notes'
 alias mkdir="mkdir -pv"
 alias ssh="ssh -A"
 alias myip="curl http://ipecho.net/plain; echo"
-alias clip="xclip -selection c"
+alias clip="pbcopy"
 alias tl="clear && task list"
 alias tlw="clear && task list +placeiq"
 alias tlp="clear && task list +personal"
 alias tkill="tmux kill-session"
 alias fsize="du -sh ./* | sort -h"
 alias dotsize="du -sh ./.* | sort -h"
-alias pacsearch="pacman -Ss"
-
-# calendar aliass
-alias gcal='gcalcli --configFolder=~/.gcalcli_placeiq 2>/dev/null'
-alias gcalw='gcalcli --configFolder=~/.gcalcli_placeiq 2>/dev/null'
-alias gcalp='gcalcli --configFolder=~/.gcalcli_personal 2>/dev/null'
 
 # Python aliases
 alias ip2='ipython2'
@@ -55,11 +45,9 @@ alias ip3='ipython'
 alias subup="git submodule foreach git pull origin master"
 
 # Work aliases
-alias gfs='snakebite -n gandalf-nn.placeiq.net'
-alias pfs='snakebite -n phoenix-nn.placeiq.net'
+alias bastionStgDown="ssh -O exit bastion-stg"
+alias bastionDown="ssh -O exit bastion"
 
-# Docker aliases (Is this the best way to do this??)
-alias influxd='docker exec -it influxd influxd'
 
 function focus()
 {
@@ -69,6 +57,39 @@ function focus()
         echo "Error: argument must be a number"
     else
         (zsh -c "~/.bin/focus.sh start ${1}; sleep $(( ${1} * 60 )); ~/.bin/focus.sh stop ${1}" &)
+    fi
+}
+
+
+# connect to bastion host
+function bastionUp()
+{
+    ssh -O check bastion 2> /dev/null
+
+    retVal=$?
+
+    if [ $retVal -ne 0 ]; then
+       echo "Created socks tunnel to bastion..."
+       # forward 1080 via socks
+       ssh -fNTMn -D 1080 bastion
+    else
+       :
+    fi
+}
+
+
+function bastionStgUp()
+{
+    ssh -O check bastion-stg 2> /dev/null
+
+    retVal=$?
+
+    if [ $retVal -ne 0 ]; then
+       echo "Created socks tunnel to bastion..."
+       # forward 1080 via socks
+       ssh -fNTMn -D 1080 bastion-stg
+    else
+       :
     fi
 }
 
