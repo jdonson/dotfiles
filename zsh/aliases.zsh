@@ -47,10 +47,14 @@ alias subup="git submodule foreach git pull origin master"
 # Work aliases
 alias bastionStgDown="ssh -O exit bastion-stg"
 alias bastionDown="ssh -O exit bastion"
-
+alias bastionCheck="ssh -O check bastion"
+alias httpBas="http --proxy=http:socks5://localhost:1080"
+alias hb="http --proxy=http:socks5://localhost:1080"
+alias httpStg="http --proxy=http:socks5://localhost:1180"
 
 function focus()
 {
+    echo $1
     if [[ "${1}" == "" ]]; then
         echo "Please specify the number of minutes to focus"
     elif ! [[ "${1}" =~ ^[0-9]+$ ]]; then
@@ -60,6 +64,15 @@ function focus()
     fi
 }
 
+function promq()
+{
+    echo ${1}
+    if [[ "${1}" == "" ]]; then
+        echo "please specify a prometheus query"
+    else
+        httpBas "http://prometheus-us-central1-a.int.2pth.com:9090/api/v1/query?query=${1}"
+    fi
+}
 
 # connect to bastion host
 function bastionUp()
