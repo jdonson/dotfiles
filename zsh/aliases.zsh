@@ -36,6 +36,7 @@ alias tlp="clear && task list +personal"
 alias tkill="tmux kill-session"
 alias fsize="du -sh ./* | sort -h"
 alias dotsize="du -sh ./.* | sort -h"
+alias dircolors="gdircolors"
 
 # Python aliases
 alias ip2='ipython2'
