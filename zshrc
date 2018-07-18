@@ -9,9 +9,6 @@ antibody bundle < ~/.zsh/plugins.txt > ~/.zsh/plugins.zsh
 # Aliases (must be sourced before plugins)
 source ~/.zsh/aliases.zsh
 
-# Source plugins
-source ~/.zsh/plugins.zsh
-
 # Impact settings
 source ~/.zsh/impact.zsh
 
@@ -23,6 +20,9 @@ source ~/.zsh/settings.zsh
 
 # External settings
 source ~/.zsh/external.zsh
+
+# Source plugins
+source ~/.zsh/plugins.zsh
 
 # Allow local customizations in the ~/.zshrc_local_after file
 if [ -f ~/.zshrc_local_after ]; then
