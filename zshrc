@@ -6,6 +6,9 @@ fi
 # init plugins
 antibody bundle < ~/.zsh/plugins.txt > ~/.zsh/plugins.zsh
 
+# Aliases (must be sourced before plugins)
+source ~/.zsh/aliases.zsh
+
 # Source plugins
 source ~/.zsh/plugins.zsh
 
@@ -18,20 +21,8 @@ source ~/.zsh/go.zsh
 # Settings
 source ~/.zsh/settings.zsh
 
-# Bootstrap
-source ~/.zsh/bootstrap.zsh
-
 # External settings
 source ~/.zsh/external.zsh
-
-# Aliases
-source ~/.zsh/aliases.zsh
-
-# Custom prompt
-source ~/.zsh/prompt.zsh
-
-# Syntax highlighting
-source ~/.zsh/syntax.zsh
 
 # Allow local customizations in the ~/.zshrc_local_after file
 if [ -f ~/.zshrc_local_after ]; then
