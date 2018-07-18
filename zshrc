@@ -2,7 +2,6 @@
 if [ -f ~/.zshrc_local_before ]; then
     source ~/.zshrc_local_before
 fi
-
 # init plugins
 antibody bundle < ~/.zsh/plugins.txt > ~/.zsh/plugins.zsh
 
