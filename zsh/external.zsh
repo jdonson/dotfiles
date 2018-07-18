@@ -10,3 +10,4 @@ export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 export DEFAULT_USER=alexmerenda
 
 export PATH=$PATH:/usr/local/Cellar/coreutils/8.30/bin
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=fg=10
