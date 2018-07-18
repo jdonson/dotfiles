@@ -10,3 +10,4 @@ To install, do a recursive clone and run ./install
 ## Dependencies
 * brew install getantibody/tap/antibody
 * brew install zsh-autosuggestions
+* brew install coreutils
