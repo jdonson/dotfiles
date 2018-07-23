@@ -3,7 +3,7 @@ if [ -f ~/.zshrc_local_before ]; then
     source ~/.zshrc_local_before
 fi
 # init plugins
-antibody bundle < ~/.zsh/plugins.txt > ~/.zsh/plugins.zsh
+/usr/local/bin/antibody bundle < ~/.zsh/plugins.txt > ~/.zsh/plugins.zsh
 
 # Aliases (must be sourced before plugins)
 source ~/.zsh/aliases.zsh
