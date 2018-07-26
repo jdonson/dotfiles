@@ -53,6 +53,7 @@ alias bastionStatus="ssh -O check bastion"
 alias httpBas="http --proxy=http:socks5://localhost:1080"
 alias hb="http --proxy=http:socks5://localhost:1080"
 alias httpStg="http --proxy=http:socks5://localhost:1180"
+alias bup="bastionUp"
 
 function focus()
 {
