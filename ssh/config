@@ -32,6 +32,12 @@ Host prom
   ProxyCommand ssh bastion -W %h:%p
   StrictHostKeyChecking no
 
+# AppNexus
+host trk-appnexusbid-asia-southeast1-p236
+  Hostname 10.29.52.3
+  ProxyCommand ssh bastion -W %h:%p
+  StrictHostKeyChecking no
+
 ## Staging
 Host bastion-stg
   Hostname 35.199.63.95
