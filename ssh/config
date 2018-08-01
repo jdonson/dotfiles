@@ -32,9 +32,19 @@ Host prom
   ProxyCommand ssh bastion -W %h:%p
   StrictHostKeyChecking no
 
+Host prometheus-us-central1-a.int.2pth.com
+  Hostname prometheus-us-central1-a.int.2pth.com
+  ProxyCommand ssh bastion -W %h:%p
+  StrictHostKeyChecking no
+
 # AppNexus
 host trk-appnexusbid-asia-southeast1-p236
   Hostname 10.29.52.3
+  ProxyCommand ssh bastion -W %h:%p
+  StrictHostKeyChecking no
+
+# Tracking
+host 10.29.15.228
   ProxyCommand ssh bastion -W %h:%p
   StrictHostKeyChecking no
 
