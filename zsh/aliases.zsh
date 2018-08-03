@@ -96,7 +96,7 @@ function bastionUp()
     if [ $retVal -ne 0 ]; then
        echo "Created socks tunnel to bastion..."
        # forward 1080 via socks
-       ssh -fNTMn -D 1080 bastion
+       ssh -fNTMn -D 1080 bastion 2> /dev/null
     else
        :
     fi
