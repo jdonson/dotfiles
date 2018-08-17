@@ -26,6 +26,15 @@ Host bastion
   ControlMaster auto
   ControlPersist 10m
 
+Host 10.29.*.*
+  ProxyCommand ssh bastion -W %h:%p
+  StrictHostKeyChecking no
+
+Host jenkins
+  Hostname deploy.2pth.com
+  ProxyCommand ssh bastion -W %h:%p
+  StrictHostKeyChecking no
+
 # Monitoring
 Host prom
   Hostname prometheus-us-central1-a.int.2pth.com
@@ -36,6 +45,17 @@ Host prometheus-us-central1-a.int.2pth.com
   Hostname prometheus-us-central1-a.int.2pth.com
   ProxyCommand ssh bastion -W %h:%p
   StrictHostKeyChecking no
+
+# Util
+host util-dal-1.2pth.com
+  Hostname util-dal-1.2pth.com
+  ProxyCommand ssh bastion -W %h:%p
+  StrictHostKeyChecking no
+
+host pix-sin-04.2pth.com
+  Hostname pix-sin-04.2pth.com
+  StrictHostKeyChecking no
+  IdentityFile ~/.ssh/id_rsa_impact
 
 # AppNexus
 host trk-appnexusbid-asia-southeast1-p236
