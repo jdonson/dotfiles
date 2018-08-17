@@ -45,6 +45,11 @@ alias ip3='ipython'
 # Git aliases
 alias subup="git submodule foreach git pull origin master"
 
+# gpg aliases
+alias encrypt='gpg --encrypt --armor --recipient 0xCC71AFF8D3DB2965'
+alias decrypt='gpg --decrypt --armor'
+alias sign='gpg --armor --clearsign --default-key 0x653287E9D6B049AC'
+
 # Work aliases
 alias bastionStgDown="ssh -O exit bastion-stg"
 alias bastionDown="ssh -O exit bastion"
