@@ -93,25 +93,25 @@ host alex-ubuntu
 
 host rpi3-0
   user alex
-  hostname 192.168.86.200
+  hostname 10.100.20.200
   identityfile ~/.ssh/id_rsa_amerenda_personal
   ForwardAgent yes
 
 host rpi3-1
   user alex
-  hostname 192.168.86.201
+  hostname 10.100.20.201
   identityfile ~/.ssh/id_rsa_amerenda_personal
   ForwardAgent yes
 
 host rpi3-2
   user alex
-  hostname 192.168.86.202
+  hostname 10.100.20.202
   identityfile ~/.ssh/id_rsa_amerenda_personal
   ForwardAgent yes
 
 host rpi3-3
   user alex
-  hostname 192.168.86.203
+  hostname 10.100.20.203
   identityfile ~/.ssh/id_rsa_amerenda_personal
   ForwardAgent yes
 
