@@ -46,6 +46,14 @@ Host prometheus-us-central1-a.int.2pth.com
   ProxyCommand ssh bastion -W %h:%p
   StrictHostKeyChecking no
 
+Host prometheus-us-east1-b.int.2pth.com
+  ProxyCommand ssh bastion -W %h:%p
+  StrictHostKeyChecking no
+
+Host prometheus-us-east1-b-1.int.2pth.com
+  ProxyCommand ssh bastion -W %h:%p
+  StrictHostKeyChecking no
+
 # Util
 host util-dal-1.2pth.com
   Hostname util-dal-1.2pth.com
