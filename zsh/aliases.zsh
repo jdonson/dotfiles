@@ -66,7 +66,12 @@ alias gfilter="gcloud compute instances list --filter="
 
 function shuttle()
 {
-    sshuttle -D --pidfile=~/.var/sshuttle.pid --ns-hosts $(grep 'nameserver' /etc/resolv.conf | awk '{ print $2 }' | head -n1)  -r 35.199.17.108 0/0
+    sshuttle -D --pidfile=~/.var/sshuttle.pid --ns-hosts $(grep 'nameserver' /etc/resolv.conf | awk '{ print $2 }' | head -n1)  -r bastion 0/0
+}
+
+function shuttle-stg()
+{
+    sshuttle -D --pidfile=~/.var/sshuttle.pid --ns-hosts $(grep 'nameserver' /etc/resolv.conf | awk '{ print $2 }' | head -n1)  -r bastion-stg 0/0
 }
 
 function focus()
