@@ -14,17 +14,17 @@ Host bitbucket.org
 
 #### Work Servers
 ## Prod
-Host azkaban-prod
-  Hostname azkaban-us-central1-a.int.2pth.com
-  ProxyCommand ssh bastion -W %h:%p
-  StrictHostKeyChecking no
-
 Host bastion
   Hostname 35.199.17.108
   IdentityFile ~/.ssh/google_compute_engine
   ControlPath ~/.ssh/bastion-%r@%h:%p.ctl
   ControlMaster auto
   ControlPersist 10m
+
+Host azkaban-prod
+  Hostname azkaban-us-central1-a.int.2pth.com
+  ProxyCommand ssh bastion -W %h:%p
+  StrictHostKeyChecking no
 
 Host 10.29.*.*
   ProxyCommand ssh bastion -W %h:%p
