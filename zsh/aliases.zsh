@@ -53,16 +53,17 @@ alias sign='gpg --armor --clearsign --default-key 0x653287E9D6B049AC'
 # Work aliases
 alias bastionStgDown="ssh -O exit bastion-stg"
 alias bastionDown="ssh -O exit bastion"
-alias bastionCheck="ssh -O check bastion"
 alias bastionStatus="ssh -O check bastion"
 alias httpBas="http --proxy=http:socks5://localhost:1080"
 alias hb="http --proxy=http:socks5://localhost:1080"
 alias httpStg="http --proxy=http:socks5://localhost:1180"
 alias bup="bastionUp"
+alias bdown="bastionDown"
+alias bstatus="bastionStatus"
+alias bcheck="bastionCheck"
 alias glista="gcloud compute instances list"
 alias glist="gcloud compute instances list --filter='labels.goog-dataproc-cluster-name:*'"
 alias gfilter="gcloud compute instances list --filter="
-
 
 function shuttle()
 {
@@ -111,6 +112,24 @@ function bastionUp()
        :
     fi
 }
+
+function bastionCheck()
+{
+    ssh -O check bastion 2> /dev/null
+    retVal=$?
+
+    if [ $retVal -eq 0 ]; then
+        (lsof -nPi | grep LISTEN | grep 1080) > /dev/null
+        retVal=$?
+        if [ $retVal -eq 0 ]; then
+            echo "bastion is running"
+        fi
+    elif [ $retVal -ne 0 ]; then
+        echo "bastion is not running"
+    fi
+}
+
+
 
 
 function bastionStgUp()
