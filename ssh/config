@@ -93,6 +93,10 @@ Host prom-stg
   StrictHostKeyChecking no
 
 ### Personal servers
+host sleeperservice.local
+  user root
+  identityfile ~/.ssh/id_rsa_alex_personal
+
 host tasks.stormhold.net
   hostname tasks.stormhold.net
   user alex
